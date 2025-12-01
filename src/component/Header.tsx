@@ -75,6 +75,18 @@ export default function Header() {
           </Link>
         </li>
         <li>
+          {/* 현재 페이지가 /imgtest 일 때만 'active' 클래스 추가 */}
+          <Link
+            to="/facerecog"
+            className={location.pathname === "/facerecog" ? "active" : ""}
+          >
+            얼굴인식
+          </Link>
+        </li>
+        <li>
+          <Link to="/geminirag">Gemini Rag</Link>
+        </li>
+        <li>
           <Link to="/calc">계산기</Link>
         </li>
         <li>
@@ -91,7 +103,11 @@ export default function Header() {
           </li>
           <li>
             {/* 서브 메뉴 링크 (예시: 파인튜닝 모델) */}
-            <Link to="/imgtest?model=fine">파인튜닝 모델</Link>
+            <Link to="/imgtest?model=muffin_chihuahua">치와와vs머핀 모델</Link>
+          </li>
+          <li>
+            {/* 서브 메뉴 링크 (예시: 파인튜닝 모델) */}
+            <Link to="/imgtest?model=plantdisease">식물잎사귀 병충해모델</Link>
           </li>
         </ul>
       )}
